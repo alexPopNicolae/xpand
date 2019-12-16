@@ -1,0 +1,79 @@
+.planet {
+    border: 1px solid white;
+    height: 150px;
+    margin:10px;
+    padding: 10px;
+    border-radius: 5px;
+    background: white;
+    display: flex; 
+    position: relative;
+    .settings-container {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    & > div {
+
+        &.planet-info {
+            width: 70px;
+            position: relative;
+            top: 30px;
+            .image-container {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                overflow: hidden;
+                position: relative;
+                left: calc(50% - 25px);
+                img {
+                    width: 100%;
+                    height: auto;;
+                }
+            }
+            .planet-name {
+                text-align: center;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        }
+        &.captain-data {
+            width: calc(100% - 150px);
+            position: relative;
+            margin-left: 20px;
+            box-sizing: border-box;
+
+            .description {
+               padding-top: 20px;
+               padding-right: 2px;
+            }
+          
+            .captain-info {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                font-size: 11px;
+                span {
+                    margin-right: 5px;
+                }
+
+                .by-captain, .robots {
+                    font-weight: bold;
+                }
+            }
+        }
+        &.status {
+            width: 50px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            vertical-align: middle;
+            .status-wrapper {
+                font-weight: bold;
+            }
+        }
+
+    }
+
+}
